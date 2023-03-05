@@ -2,9 +2,8 @@
 	"name": "suai_plus",
 	"version": "1.0.0",
 	"description": "Расширение для личного кабинета гуап",
-	"main": "index.js",
 	"scripts": {
-		"build": "webpack --config webpack/webpack.config.js",
+		"build": "webpack --config webpack.config.js",
 		"test": "jest",
 		"prettier": "npx prettier **/*.{md,html} -w",
 		"lint": "eslint **/*.js",
