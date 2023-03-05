@@ -1,0 +1,22 @@
+{
+	"name": "SUAI plus",
+	"description": "Расширение для браузера вносящее некоторые улучшения в личный кабинет гуапа.",
+	"version": "1.0",
+	"author": "goodhumored@vk.com",
+	"manifest_version": 3,
+	"permissions": [
+		"activeTab",
+		"scripting"
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": {
+		"matches": [
+			"<scheme>://new-pro.guap.ru/inside/**"
+		],
+		"js": [
+			"dist/"
+		]
+	}
+}
