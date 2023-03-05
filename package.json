@@ -4,6 +4,7 @@
 	"description": "Расширение для личного кабинета гуап",
 	"scripts": {
 		"build": "webpack --config webpack.config.js",
+		"build:watch": "webpack --watch --progress --config webpack.config.js",
 		"test": "jest",
 		"prettier": "npx prettier **/*.{md,html} -w",
 		"lint": "eslint **/*.js",

@@ -1,1 +1,1 @@
-console.log('Background service!');
+const interval = setInterval(() => console.log('asd'), 1000);
