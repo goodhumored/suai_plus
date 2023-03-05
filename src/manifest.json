@@ -16,7 +16,16 @@
 			"<scheme>://new-pro.guap.ru/inside/**"
 		],
 		"js": [
-			"dist/"
+			"."
 		]
+	},
+	"action": {
+		"default_icon": {
+			"16": "images/icon16.png",
+			"24": "images/icon24.png",
+			"32": "images/icon32.png"
+		},
+		"default_title": "Настройки",
+		"default_popup": "popup.html"
 	}
 }
