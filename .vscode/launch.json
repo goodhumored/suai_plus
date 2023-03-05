@@ -6,14 +6,16 @@
       "request": "launch",
       "name": "Debug extension in chrome",
       "url": "https://new-pro.guap.ru/inside/student/tasks/",
-      "runtimeArgs": ["--load-extension=${workspaceFolder}/dist"]
+      "runtimeArgs": ["--load-extension=${workspaceFolder}/dist"],
+      "preLaunchTask": "npm: build"
     },
     {
       "type": "firefox",
       "request": "launch",
       "name": "Debug extension in firefox",
       "url": "https://new-pro.guap.ru/inside/student/tasks/",
-      "addonPath": "${workspaceFolder}/dist"
+      "addonPath": "${workspaceFolder}/dist",
+      "preLaunchTask": "npm: build"
     }
   ]
 }
