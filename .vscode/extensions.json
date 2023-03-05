@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "firefox-devtools.vscode-firefox-debug",
+    "msjsdiag.debugger-for-chrome",
+    "dbaeumer.vscode-eslint",
+    "xabikos.javascriptsnippets",
+    "ms-vscode.vscode-typescript-next",
+    "andys8.jest-snippets",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "kisstkondoros.typelens",
+    "eliostruyf.vscode-typescript-exportallmodules",
+    "orta.vscode-jest"
+  ]
+}
