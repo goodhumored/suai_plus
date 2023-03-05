@@ -17,6 +17,7 @@
 	"homepage": "https://github.com/goodhumored/suai_plus#readme",
 	"devDependencies": {
 		"@types/chrome": "^0.0.219",
+		"@typescript-eslint/eslint-plugin": "^5.54.0",
 		"copy-webpack-plugin": "^11.0.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-prettier": "^4.2.1",
