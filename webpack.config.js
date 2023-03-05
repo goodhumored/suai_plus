@@ -30,6 +30,10 @@ module.exports = {
           from: '.',
           to: '.',
           context: 'static'
+        },
+        {
+          from: path.resolve('src', 'manifest.json'),
+          to: '.'
         }
       ]
     })
