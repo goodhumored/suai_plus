@@ -1,58 +1,61 @@
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
+  mode: "development",
   entry: {
-    background: path.resolve(__dirname, 'src', 'background.ts'),
-    content: path.resolve(__dirname, 'src', 'popup', 'content.ts'),
-    popup_style: path.resolve(__dirname, 'src', 'popup', 'popup.sass'),
-  },
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    background: path.resolve(__dirname, "src", "background.ts"),
+    content: path.resolve(__dirname, "src", "content.ts"),
+    popup: path.resolve(__dirname, "src", "popup", "index.tsx")
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
+  output: {
+    path: path.join(__dirname, "dist"),
+    filename: "[name].js",
+    clean: true
+  },
+  devtool: "source-map",
   module: {
     rules: [
       {
-        test: /\.sass$/i,
-        use: [
-					{
-						loader: 'file-loader',
-						options: { name: '[name].css'}
-					},
-          "sass-loader",
-        ],
+        test: /\.s(c|a)ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader"
       },
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
-      },
+      }
     ]
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
-          from: '.',
-          to: '.',
-          context: 'static'
+          from: ".",
+          to: ".",
+          context: "static"
         },
         {
-          from: path.resolve('src', 'manifest.json'),
-          to: '.'
+          from: path.resolve("src", "manifest.json"),
+          to: "."
         }
       ]
     }),
-		new HtmlWebpackPlugin({
-      filename: 'popup.html',
-			template: path.resolve('src','popup','popup.html'),
-      inject: false,
+    new HtmlWebpackPlugin({
+      template: "./src/popup/popup.html",
+      filename: "popup.html",
+      excludeChunks: ["content", "background"]
     })
   ]
 };
