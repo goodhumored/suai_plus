@@ -15,5 +15,9 @@
     "moduleResolution": "node",
     "jsx": "react-jsx"
   },
-  "include": ["./src/**/*.ts", "src/modules/hideTasks/content.tsx"]
+  "include": [
+    "./src/**/*.ts",
+    "src/modules/hideTasks/content.tsx",
+    "src/modules/hideTasks/popup/settings.component.spec.tsx"
+  ]
 }
