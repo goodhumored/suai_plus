@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HideTasksSetting test suit Rendering should be checked 1`] = `
+<div>
+  <input
+    checked={false}
+    id="hideTasks"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="hideTasks"
+  >
+    Скрывать отмеченные задачи
+  </label>
+</div>
+`;
+
+exports[`HideTasksSetting test suit Rendering should be unchecked componentDidMount should be called 1`] = `
+<div>
+  <input
+    checked={false}
+    id="hideTasks"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="hideTasks"
+  >
+    Скрывать отмеченные задачи
+  </label>
+</div>
+`;
+
+exports[`HideTasksSetting test suit Rendering should be unchecked renders well 1`] = `
+<div>
+  <input
+    checked={false}
+    id="hideTasks"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    htmlFor="hideTasks"
+  >
+    Скрывать отмеченные задачи
+  </label>
+</div>
+`;

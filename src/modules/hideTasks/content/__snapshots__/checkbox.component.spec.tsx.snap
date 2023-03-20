@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HideTaskCheckbox test suit Rendering should be checked 1`] = `
+<input
+  checked={false}
+  onChange={[Function]}
+  type="checkbox"
+/>
+`;
+
+exports[`HideTaskCheckbox test suit Rendering should be unchecked componentDidMount should be called 1`] = `
+<input
+  checked={false}
+  onChange={[Function]}
+  type="checkbox"
+/>
+`;
+
+exports[`HideTaskCheckbox test suit Rendering should be unchecked renders well 1`] = `
+<input
+  checked={false}
+  onChange={[Function]}
+  type="checkbox"
+/>
+`;
